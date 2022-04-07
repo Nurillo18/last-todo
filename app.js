@@ -126,7 +126,8 @@ elForm.addEventListener("submit", evt => {
     }
 
     async function search(){
-        const response  = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${elInputVal}`);
+        // const response  = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${elInputVal}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${elInputVal}`);
         const data = await response.json();
         films = data.Search;
         renderTodos(films, elList);
