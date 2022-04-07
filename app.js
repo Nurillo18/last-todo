@@ -101,12 +101,12 @@ function renderTodos(arr, element) {
         newItem.classList.add("list__item");
         newBtn.classList.add("list__btn")
 
-        fragment.appendChild(newItem);
+        // fragment.appendChild(newItem);
         newItem.appendChild(newImg);
         newItem.appendChild(newTitle);
         newItem.appendChild(newText);
         newItem.appendChild(newBtn);
-        element.appendChild(fragment);
+        element.appendChild(newItem);
     })
 }
 
