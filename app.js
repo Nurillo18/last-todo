@@ -58,7 +58,6 @@ elList.addEventListener("click", evt => {
         rendArr(modalArr, elModal);
     }
 
-    renderTodos(films, elList);
 });
 
 
