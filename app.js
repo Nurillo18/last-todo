@@ -23,16 +23,32 @@ elModal.addEventListener("click" ,evt => {
 });
 
 const lastImg = document.createElement("img");
+const lastDiv = document.createElement("div");
+const lastTitle = document.createElement("h1");
+const lastYear = document.createElement("p");
+
 function rendArr(arr , element){
     element.innerHTML = "";
     arr.forEach(e => {
 
 
-    lastImg.classList.add("last-img");
-    lastImg.setAttribute("src", e.Poster);
+        lastImg.classList.add("last-img");
+        lastImg.setAttribute("src", e.Poster);
 
-    element.appendChild(lastImg);
-});
+        lastDiv.classList.add("inner-box");
+        lastTitle.classList.add("inner-title")
+        lastYear.classList.add("modal-year");
+
+
+        lastTitle.textContent = e.Title;
+        lastYear.textContent = e.Year;
+
+        lastDiv.appendChild(lastImg);
+        lastDiv.appendChild(lastTitle);
+        lastDiv.appendChild(lastYear);
+        lastDiv.appendChild(lastYear);
+        element.appendChild(lastDiv);
+    });
 
 }
 
@@ -41,7 +57,9 @@ elList.addEventListener("click", evt => {
     if(evt.target){
         elModal.classList.remove("block");
         elBox.classList.remove("opacoty");
-        lastImg.classList.remove("last-img")
+        lastImg.classList.remove("last-img");
+        lastTitle.classList.remove("inner-title")
+        lastYear.classList.remove("modal-year");
     }
 
 

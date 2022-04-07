@@ -113,6 +113,8 @@ input {
 }
 
 .modal{
+    position: relative;
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -122,10 +124,9 @@ input {
     z-index: 100000;
     width: 600px;
     height: 400px;
-    background-color:#fff;
+    background-color:#F1F2F3;
     border-radius: 21px;
     box-shadow: inset 0 0 20px black;
-    display: none;
 }
 
 .block{
@@ -164,4 +165,43 @@ input {
 
 .dn{
     display: none;
+}
+
+.last-img{
+    height: 100%;
+    border-top-left-radius: 21px;
+    border-bottom-left-radius: 21px;
+
+}
+
+.inner-box{
+    height: 100%;
+    display: flex;
+}
+.inner-title{
+    font-family: monospace;
+    font-size: 42px;
+    margin-top: 20px;
+    padding-left: 18px;
+}
+
+.modal-year{
+    font-family: monospace;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+}
+
+.imgs{
+    position: absolute;
+    right: -56%;
+    top: 40%;
+    background:transparent;
+    background-image: url("./images/animate.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+
 }
